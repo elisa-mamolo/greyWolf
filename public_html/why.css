@@ -1,0 +1,263 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+    box-sizing: border-box;
+}
+.greywolf{
+	
+    font-family: 'Orbitron', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    color: dimgrey;
+    display: inline-block;
+    
+}
+
+
+.gwlogo{
+    max-height: 4em;
+    max-width: 4em;
+}
+
+
+
+.logotext {
+    display: flex;
+    justify-content: center;
+    
+}
+/*HAMBURGER MENU
+thanks to 
+https://codepen.io/erikterwan/pen/EVzeRP 
+*/
+
+ul a{
+    text-decoration: none;
+    
+}
+ul a:hover
+{
+  color: darkgreen;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 155px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+    
+#menu li
+{
+  padding: 20px;
+  font-size: 22px;
+  font-family: 'Orbitron';
+}
+/*FADE LEFT*/
+#menuToggle input:checked ~ ul
+{
+  transform: scale(0.7, 0.7);
+  opacity: 0.9;
+}
+
+
+/* HTML MARGINS */
+
+html body{
+	margin: 15px;
+	padding: 5px;
+	min-width: 25%;
+	max-width: 100%;
+       
+}
+/* H2*/
+
+h2{
+	font-family: 'Orbitron', serif;
+        font-size: 120%;
+	color: dimgrey;
+	text-align: center;
+	text-decoration: none;
+}
+p{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-stretch: extra-expanded;
+    color: dimgrey;
+    }
+
+.clear{
+	clear: left;
+}
+.text{
+    text-align: justify;
+}
+
+
+a {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-stretch: semi-expanded;
+    word-spacing: 2px;
+    color: dimgrey;
+    text-decoration: none;
+   
+}
+
+/*FOOTER STYLE*/
+footer p{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    font-stretch: semi-expanded;
+    word-spacing: 2px;
+    color: dimgrey;
+   
+}
+footer a{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-stretch: semi-expanded;
+    word-spacing: 2px;
+    color: dimgrey;
+    
+}
+
+.social a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    justify-content: center;
+}
+
+
+
+.logo1 .logo2 img{
+    max-width: 100px;
+    max-height: 100px;
+}
+img{
+    max-width: 100px;
+}
+.content img{
+    max-width: 100%;
+    min-width: 50%;
+    max-height: 100%;
+    min-height: 50%;
+}
+.changecolor{
+    color: black;
+}
+p{
+    text-align: justify;
+    
+}
